@@ -1,0 +1,81 @@
+@font-face {
+    font-family: mine;
+    /* src: url("anastasia-script-personal-use.regular.ttf"); */
+    /* src:url("prestige-signature-script-demo.regular.ttf"); */
+    src: url("./src/fonts/Prestige Signature Script - Demo.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    line-height: 1.7;
+}
+
+body {
+    background-image: url('background.png');
+    background-size: cover;
+}
+
+header {
+    padding: 1em;
+}
+
+h1 {
+    font-family: mine;
+    color: white;
+}
+
+.game-container {
+    height: 80vh;
+    /* background: orange; */
+}
+
+img {
+    width: auto;
+    height: 80%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    padding: .6em;
+    border: solid 1.5px pink;
+    background: none;
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100vh - 10vh);
+    font-size: 1em;
+    cursor: pointer;
+}
+
+
+/* Remove blue focus on click */
+
+button:focus {
+    outline: none;
+}
+
+
+/* Button on hover fill animation */
+
+button:hover {
+    animation-name: button-background-fill;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes button-background-fill {
+    100% {
+        background-color: rgb(253, 148, 166);
+        /* background-color: black; */
+        opacity: 0.8;
+        color: white;
+        text-transform: bold;
+    }
+}
