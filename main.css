@@ -95,8 +95,6 @@ button:hover {
 .panel-1 {
     grid-column: 1/2;
     border: 2px solid blue;
-    display: grid;
-    justify-content: center;
     align-items: center;
     text-align: center;
 }
@@ -109,4 +107,22 @@ button:hover {
 #ballQuestion {
     height: 60vh;
     width: auto;
+}
+
+label {
+    font-size: 4em;
+}
+
+.title {
+    font-size: 3em;
+}
+
+input {
+    height: 4em;
+    width: 80%;
+    font-size: 1em;
+    padding: 0.4em;
+    margin-bottom: 3em;
+    border: none;
+    color: grey;
 }
