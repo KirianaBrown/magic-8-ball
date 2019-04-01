@@ -41,8 +41,19 @@ document.querySelector('.btn-shake').addEventListener('click', function() {
         document.querySelector('.no-input-message').style.display = 'block';
     } else {
         document.querySelector('.no-input-message').style.display = 'none';
-        let randomNumber = Math.floor(Math.random() * 5 + 1);
+
+        // Apply shake class
+
         let magicBall = document.querySelector('.game-ball');
+        magicBall.classList.add('apply-shake')
+
+        // Generate random number
+        let randomNumber = Math.floor(Math.random() * 5 + 1);
+
+        // Update src of image using the random number
+
         magicBall.src = './src/assets/ball-' + randomNumber + '.png';
+
+        magicBall.classList.remove('apply-shake')
     }
 })
