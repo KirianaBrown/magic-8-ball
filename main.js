@@ -28,6 +28,15 @@ document.querySelector('.btn-shake').addEventListener('click', function() {
 */
 
 
+// Respond to enter key
+
+document.querySelector('#inputField').addEventListener('keyup', function() {
+    if (event.keyCode === 13) {
+        document.querySelector('.btn-shake').click();
+    }
+})
+
+
 
 document.querySelector('.btn-shake').addEventListener('click', function() {
 
@@ -45,7 +54,7 @@ document.querySelector('.btn-shake').addEventListener('click', function() {
         // Apply shake class
 
         let magicBall = document.querySelector('.game-ball');
-        magicBall.classList.add('apply-shake')
+        // magicBall.classList.add('apply-shake')
 
         // Generate random number
         let randomNumber = Math.floor(Math.random() * 5 + 1);
