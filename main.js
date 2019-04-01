@@ -54,6 +54,25 @@ document.querySelector('.btn-shake').addEventListener('click', function() {
 
         magicBall.src = './src/assets/ball-' + randomNumber + '.png';
 
-        magicBall.classList.remove('apply-shake')
+        // Hide shake button and display reset button
+
+        document.querySelector('.btn-shake').style.display = 'none';
+        document.querySelector('.btn-reset').style.display = 'inline';
+
     }
+})
+
+
+document.querySelector('.btn-reset').addEventListener('click', function() {
+
+    // change magic 8 ball image back to ball-0
+    let magicBall = document.querySelector('.game-ball');
+    magicBall.src = "./src/assets/ball-0.png";
+
+    // clear input text field
+    document.querySelector('#inputField').value = '';
+
+    // hide reset button and show shake button
+    document.querySelector('.btn-shake').style.display = 'inline';
+    document.querySelector('.btn-reset').style.display = 'none';
 })
