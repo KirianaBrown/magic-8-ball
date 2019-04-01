@@ -42,12 +42,21 @@ img {
 }
 
 button {
-    padding: 1em;
-    border: solid 0.6px pink;
+    padding: .6em;
+    border: solid 1.5px pink;
     background: none;
     position: absolute;
     width: 200px;
     left: 50%;
     transform: translateX(-50%);
-    top: calc(100vh - 10vh)
+    top: calc(100vh - 10vh);
+    font-size: 1em;
+    focus: none;
+}
+
+
+/* Remove blue focus on click */
+
+button:focus {
+    outline: none;
 }
