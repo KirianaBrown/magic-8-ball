@@ -10,7 +10,7 @@
 */
 
 
-
+/*
 
 document.querySelector('.btn-shake').addEventListener('click', function() {
     // Generate a random Number
@@ -23,5 +23,13 @@ document.querySelector('.btn-shake').addEventListener('click', function() {
     let eightBall = document.querySelector('.game-ball');
     eightBall.src = './src/assets/ball-' + randomNumber + '.png';
 
+})
 
+*/
+
+
+
+document.querySelector('.btn-shake').addEventListener('click', function() {
+    let input = document.querySelector('#inputField').value;
+    console.log(input)
 })
