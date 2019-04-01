@@ -51,7 +51,7 @@ button {
     transform: translateX(-50%);
     top: calc(100vh - 10vh);
     font-size: 1em;
-    focus: none;
+    cursor: pointer;
 }
 
 
@@ -59,4 +59,23 @@ button {
 
 button:focus {
     outline: none;
+}
+
+
+/* Button on hover fill animation */
+
+button:hover {
+    animation-name: button-background-fill;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes button-background-fill {
+    100% {
+        background-color: rgb(253, 148, 166);
+        /* background-color: black; */
+        opacity: 0.8;
+        color: white;
+        text-transform: bold;
+    }
 }
