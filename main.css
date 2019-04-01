@@ -16,6 +16,7 @@
 body {
     background-image: url('background.png');
     background-size: cover;
+    font-family: 'Open Sans', sans-serif;
 }
 
 header {
@@ -89,12 +90,15 @@ button:hover {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 1em;
     height: calc(100vh - 6em);
-    background: orange;
 }
 
 .panel-1 {
     grid-column: 1/2;
     border: 2px solid blue;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .panel-2 {
