@@ -106,12 +106,13 @@ button:hover {
 }
 
 #ballQuestion {
-    height: 60vh;
+    height: 80vh;
     width: auto;
 }
 
 label {
     font-size: 4em;
+    /* text-transform: uppercase; */
 }
 
 .title {
