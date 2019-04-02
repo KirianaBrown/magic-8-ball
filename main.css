@@ -189,4 +189,8 @@ input {
 
 .btn-reset {
     display: none;
+    text-align: center;
+    margin-top: 1em;
+    background: grey;
+    border: none;
 }
