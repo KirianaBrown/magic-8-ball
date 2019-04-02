@@ -65,7 +65,7 @@ document.querySelector('.btn-shake').addEventListener('click', function() {
 
         // Hide shake button and display reset button
 
-        document.querySelector('.btn-shake').style.display = 'none';
+        // document.querySelector('.btn-shake').style.display = 'none';
         document.querySelector('.btn-reset').style.display = 'inline';
 
     }
