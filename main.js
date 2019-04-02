@@ -66,7 +66,7 @@ document.querySelector('.btn-shake').addEventListener('click', function() {
         // Hide shake button and display reset button
 
         // document.querySelector('.btn-shake').style.display = 'none';
-        document.querySelector('.btn-reset').style.display = 'block';
+        document.querySelector('.btn-reset').style.display = 'inline';
 
     }
 })
@@ -83,5 +83,5 @@ document.querySelector('.btn-reset').addEventListener('click', function() {
 
     // hide reset button and show shake button
     document.querySelector('.btn-shake').style.display = 'inline';
-    document.querySelector('.btn-reset').style.display = 'block';
+    document.querySelector('.btn-reset').style.display = 'none';
 })
