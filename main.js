@@ -61,7 +61,14 @@ document.querySelector('.btn-shake').addEventListener('click', function() {
 
         // Update src of image using the random number
 
-        magicBall.src = './src/assets/ball-' + randomNumber + '.png';
+
+        setTimeout(function() {
+            // magicBall.src = './src/assets/ball-' + randomNumber + '.png';
+            console.log('update the content in the ball')
+        }, 1000);
+
+
+        // magicBall.src = './src/assets/ball-' + randomNumber + '.png';
 
         // Hide shake button and display reset button
 
