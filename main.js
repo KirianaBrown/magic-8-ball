@@ -76,7 +76,7 @@ document.querySelector('.btn-shake').addEventListener('click', function() {
 let element = document.querySelector('.game-ball');
 element.addEventListener('animationend', function() {
     console.log('animation has ended');
-    // element.classList.remove('apply-shake');
+    element.classList.remove('apply-shake');
 })
 
 
