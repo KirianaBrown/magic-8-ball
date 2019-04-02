@@ -65,7 +65,7 @@ document.querySelector('.btn-shake').addEventListener('click', function() {
         setTimeout(function() {
             magicBall.src = './src/assets/ball-' + randomNumber + '.png';
             console.log('update the content in the ball')
-        }, 1000);
+        }, 800);
 
 
         // magicBall.src = './src/assets/ball-' + randomNumber + '.png';
