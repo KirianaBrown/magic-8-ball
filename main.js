@@ -71,6 +71,15 @@ document.querySelector('.btn-shake').addEventListener('click', function() {
     }
 })
 
+// Add and remove shake animation
+
+let element = document.querySelector('.game-ball');
+element.addEventListener('animationend', function() {
+    console.log('animation has ended');
+    // element.classList.remove('apply-shake');
+})
+
+
 
 document.querySelector('.btn-reset').addEventListener('click', function() {
 
