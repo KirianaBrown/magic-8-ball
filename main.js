@@ -54,14 +54,21 @@ document.querySelector('.btn-shake').addEventListener('click', function() {
         // Apply shake class
 
         let magicBall = document.querySelector('.game-ball');
-        // magicBall.classList.add('apply-shake')
+        magicBall.classList.add('apply-shake')
 
         // Generate random number
         let randomNumber = Math.floor(Math.random() * 5 + 1);
 
         // Update src of image using the random number
 
-        magicBall.src = './src/assets/ball-' + randomNumber + '.png';
+
+        setTimeout(function() {
+            magicBall.src = './src/assets/ball-' + randomNumber + '.png';
+            console.log('update the content in the ball')
+        }, 800);
+
+
+        // magicBall.src = './src/assets/ball-' + randomNumber + '.png';
 
         // Hide shake button and display reset button
 
@@ -70,6 +77,15 @@ document.querySelector('.btn-shake').addEventListener('click', function() {
 
     }
 })
+
+// Add and remove shake animation
+
+let element = document.querySelector('.game-ball');
+element.addEventListener('animationend', function() {
+    console.log('animation has ended');
+    element.classList.remove('apply-shake');
+})
+
 
 
 document.querySelector('.btn-reset').addEventListener('click', function() {
