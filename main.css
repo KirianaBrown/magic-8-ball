@@ -149,7 +149,7 @@ input {
     ADD SHAKE ANIMATION */
 
 .apply-shake {
-    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    animation: shake 1s cubic-bezier(.36, .07, .19, .97) both;
     /* transform: translate3d(0, 0, 0); */
     transform: translate(-50%, -50%, 0);
     backface-visibility: hidden;
