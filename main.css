@@ -16,7 +16,8 @@
 }
 
 body {
-    /* background-image: url('background.png'); */
+    background-image: url('background.png');
+    /* background-color: black; */
     background-size: cover;
     font-family: 'Open Sans', sans-serif;
 }
@@ -28,11 +29,6 @@ header {
 h1 {
     font-family: mine;
     color: white;
-}
-
-.game-container {
-    height: 80vh;
-    /* background: orange; */
 }
 
 img {
@@ -95,6 +91,9 @@ button:hover {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 1em;
     height: calc(100vh - 6em);
+    background-color: orange;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .panel-1 {
@@ -183,4 +182,13 @@ input {
     margin-top: 1em;
     background: grey;
     border: none;
+}
+
+
+/* Media Query */
+
+@media only screen and (max-width: 800px) {
+    .container-h {
+        display: block;
+    }
 }
