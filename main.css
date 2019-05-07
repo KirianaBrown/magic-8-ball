@@ -100,6 +100,7 @@ button:hover {
     grid-column: 1/2;
     align-items: center;
     text-align: center;
+    height: 100%;
 }
 
 .panel-2 {
@@ -119,6 +120,7 @@ label {
 .title {
     font-size: 3em;
     font-family: 'Open Sans', sans-serif;
+    margin-bottom: 1em;
 }
 
 input {
@@ -128,8 +130,15 @@ input {
     padding: 0.4em;
     margin-top: 1em;
     margin-bottom: 3em;
-    border: none;
+    /* border: none; */
     color: grey;
+    border: 3px solid #ccc;
+    outline: none;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+    outline: none;
 }
 
 
