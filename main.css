@@ -16,8 +16,8 @@
 }
 
 body {
-    background-image: url('background.png');
-    /* background-color: black; */
+    /* background-image: url('background.png'); */
+    background-color: #e9ecef;
     background-size: cover;
     font-family: 'Open Sans', sans-serif;
 }
@@ -91,7 +91,7 @@ button:hover {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 1em;
     height: calc(100vh - 6em);
-    background-color: orange;
+    /* background-color: orange; */
     width: 90%;
     margin: 0 auto;
 }
@@ -104,20 +104,21 @@ button:hover {
 
 .panel-2 {
     grid-column: 2/3;
+    height: 100%;
 }
 
-#ballQuestion {
-    height: 80vh;
-    width: auto;
+.game-ball {
+    height: 24em;
 }
 
 label {
-    font-size: 4em;
+    font-size: 1.6em;
     /* text-transform: uppercase; */
 }
 
 .title {
     font-size: 3em;
+    font-family: 'Open Sans', sans-serif;
 }
 
 input {
@@ -190,5 +191,26 @@ input {
 @media only screen and (max-width: 800px) {
     .container-h {
         display: block;
+    }
+    .title {
+        font-size: 3em;
+    }
+    label {
+        font-size: 1.2em;
+    }
+    input {
+        height: 3em;
+        width: 80%;
+        font-size: .8em;
+        padding: 0.4em;
+        margin-top: 1em;
+        margin-bottom: 3em;
+        border: none;
+        color: grey;
+    }
+    .game-ball {
+        height: 20em;
+        width: auto;
+        padding: 0em;
     }
 }
