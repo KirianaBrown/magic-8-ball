@@ -19,6 +19,10 @@ a {
     text-decoration: none;
 }
 
+p {
+    margin-bottom: 2em;
+}
+
 body {
     /* background-image: url('background.png'); */
     background-color: #e9ecef;
@@ -144,6 +148,12 @@ input {
 input[type=text]:focus {
     border: 3px solid #555;
     outline: none;
+}
+
+#clearField {
+    padding-left: 1em;
+    color: red;
+    cursor: pointer;
 }
 
 
