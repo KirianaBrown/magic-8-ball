@@ -1,103 +1,100 @@
 /*
+            MAGIC 8 BALL CODE - KB MARCH / APRIL 2019
+                    GITHUB REPO: MAGIC-8-BALL 
 
-  1. get value from input field and if null then error else 
-  2. generate random number using math methods
-  3. random number = the src image update to replace the magic 8 ball
-  4. reset button to revert back and ask a new question and hide the error message
-  5. add shake annimation
-
-
+    STRUCTURE
+    1. get value from input field and if null then error else 
+    2. generate random number using math methods
+    3. random number = the src image update to replace the magic 8 ball
+    4. reset button to revert back and ask a new question and hide the error message
+    5. add shake annimation
 */
 
+// Global Variables
 
-/*
+const gameBall = document.querySelector('.game-ball');
+const btnShake = document.querySelector('.btn-shake');
+const btnReset = document.querySelector('.btn-reset');
+let userInput = document.querySelector('#inputField');;
 
-document.querySelector('.btn-shake').addEventListener('click', function() {
-    // Generate a random Number
-    let randomNumber = Math.floor(Math.random() * 5 + 1);
+// Call Init Function 
 
-    // Console log
-    console.log(randomNumber)
+init();
 
-    // Update image class of game-ball
-    let eightBall = document.querySelector('.game-ball');
-    eightBall.src = './src/assets/ball-' + randomNumber + '.png';
+// Call Shake button function
 
-})
+btnShake.addEventListener('click', function() {
 
-*/
+    console.log(userInput.value.length);
 
-
-// Respond to enter key
-
-document.querySelector('#inputField').addEventListener('keyup', function() {
-    if (event.keyCode === 13) {
-        document.querySelector('.btn-shake').click();
-    }
-})
-
-
-
-document.querySelector('.btn-shake').addEventListener('click', function() {
-
-    // 1. Get the input value 
-    let input = document.querySelector('#inputField').value;
-    // console.log(input)
-
-    // 2.  If empty display error else update the src of the image with the random number generated
-
-    if (input === '') {
+    // View User input and check for if blank
+    if (userInput.value.length === 0) {
         document.querySelector('.no-input-message').style.display = 'block';
+        console.log('empty input field')
     } else {
         document.querySelector('.no-input-message').style.display = 'none';
+        console.log('not empty')
 
         // Apply shake class
-
-        let magicBall = document.querySelector('.game-ball');
-        magicBall.classList.add('apply-shake')
+        gameBall.classList.add('apply-shake')
 
         // Generate random number
         let randomNumber = Math.floor(Math.random() * 5 + 1);
 
         // Update src of image using the random number
-
-
         setTimeout(function() {
-            magicBall.src = './src/assets/ball-' + randomNumber + '.png';
+            gameBall.src = './src/assets/ball-' + randomNumber + '.png';
             console.log('update the content in the ball')
         }, 800);
 
+        // Display the reset button as well
+        btnReset.style.display = 'inline';
 
-        // magicBall.src = './src/assets/ball-' + randomNumber + '.png';
-
-        // Hide shake button and display reset button
-
-        // document.querySelector('.btn-shake').style.display = 'none';
-        document.querySelector('.btn-reset').style.display = 'inline';
-
+        // Check for end of animation and change classes
+        gameBall.addEventListener('animationend', function() {
+            console.log('animation has ended');
+            gameBall.classList.remove('apply-shake');
+        })
     }
 })
 
-// Add and remove shake animation
+// Respond to enter key
 
-let element = document.querySelector('.game-ball');
-element.addEventListener('animationend', function() {
-    console.log('animation has ended');
-    element.classList.remove('apply-shake');
+userInput.addEventListener('keyup', function() {
+    if (event.keyCode === 13) {
+        btnShake.click();
+    }
 })
 
+// Game reset 
+btnReset.addEventListener('click', function() {
+    document.getElementById('myForm').reset();
 
+});
 
-document.querySelector('.btn-reset').addEventListener('click', function() {
+// Create init Function
 
-    // change magic 8 ball image back to ball-0
-    let magicBall = document.querySelector('.game-ball');
-    magicBall.src = "./src/assets/ball-0.png";
+function init() {
+    console.log('reset button');
 
-    // clear input text field
-    document.querySelector('#inputField').value = '';
+    // Set value to null
+    userInput.value === '';
+    // Set src image to the magic 8 ball 
+    gameBall.src = './src/assets/ball-0.png';
+    // Hide reset button
+    btnReset.style.display = 'none';
+    btnShake.style.display = 'inline';
+    // Remove the shake class form game ball
+    gameBall.classList.remove('.apply-shake');
+    console.log(userInput.value);
 
-    // hide reset button and show shake button
-    document.querySelector('.btn-shake').style.display = 'inline';
-    document.querySelector('.btn-reset').style.display = 'none';
-})
+}
+
+/*
+    6th April - Updates to push:
+        Refactor code by creating global reusable variables. Set up an init function to reset the application which gets called when the user selects reset. 
+
+        TO DO:
+            * Update images with new responses
+            * Create central 8 ball image
+*/
