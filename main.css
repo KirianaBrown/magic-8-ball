@@ -40,13 +40,19 @@ h1 {
 }
 
 img {
+    display: block;
+    margin: auto;
+}
+
+
+/* img {
     width: auto;
     height: 80%;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+} */
 
 button {
     padding: .6em;
@@ -115,6 +121,8 @@ button:hover {
 .panel-2 {
     grid-column: 2/3;
     height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .game-ball {
@@ -172,7 +180,7 @@ input[type=text]:focus {
 .apply-shake {
     animation: shake 1s cubic-bezier(.36, .07, .19, .97) both;
     /* transform: translate3d(0, 0, 0); */
-    transform: translate(-50%, -50%, 0);
+    transform: translate(-1%, -1%, 0);
     backface-visibility: hidden;
     perspective: 1000px;
 }
@@ -180,16 +188,16 @@ input[type=text]:focus {
 @keyframes shake {
     20%,
     80% {
-        transform: translate3d(-52%, -50%, 0);
+        transform: translate3d(-1%, -1%, 0);
     }
     30%,
     50%,
     70% {
-        transform: translate3d(-60%, -50%, 0);
+        transform: translate3d(-5%, -5%, 0);
     }
     40%,
     60% {
-        transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(-1%, -1%, 0);
     }
 }
 
@@ -231,9 +239,14 @@ footer {
 @media only screen and (max-width: 800px) {
     .container-h {
         display: block;
+        height: 100%;
+    }
+    header {
+        padding: 0.2em;
     }
     .title {
         font-size: 3em;
+        margin-bottom: 0em;
     }
     label {
         font-size: 1.2em;
@@ -249,8 +262,20 @@ footer {
         color: grey;
     }
     .game-ball {
-        height: 20em;
-        width: auto;
-        padding: 0em;
+        height: auto;
+        max-width: 80%;
+        padding: 1em;
+        margin: auto;
+    }
+    .panel-1 {
+        height: auto;
+    }
+    .panel-2 {
+        height: auto;
+    }
+    .introductory-p {
+        font-size: 0.8em;
+        padding: 1em;
+        margin-bottom: 0;
     }
 }
