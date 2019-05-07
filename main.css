@@ -150,12 +150,6 @@ input[type=text]:focus {
     outline: none;
 }
 
-#clearField {
-    padding-left: 1em;
-    color: red;
-    cursor: pointer;
-}
-
 
 /* Input error message */
 
@@ -201,12 +195,20 @@ input[type=text]:focus {
 
 /* reset button */
 
-.btn-reset {
+
+/* .btn-reset {
     display: none;
     text-align: center;
     margin-top: 1em;
     background: grey;
     border: none;
+} */
+
+.btn-clear {
+    /* display: none; */
+    padding-left: 1em;
+    color: red;
+    cursor: pointer;
 }
 
 

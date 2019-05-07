@@ -73,7 +73,7 @@ document.querySelector('.btn-shake').addEventListener('click', function() {
         // Hide shake button and display reset button
 
         // document.querySelector('.btn-shake').style.display = 'none';
-        document.querySelector('.btn-reset').style.display = 'inline';
+        document.querySelector('.btn-clear').style.display = 'inline';
 
     }
 })
@@ -88,7 +88,7 @@ element.addEventListener('animationend', function() {
 
 
 
-document.querySelector('.btn-reset').addEventListener('click', function() {
+document.querySelector('.btn-clear').addEventListener('click', function() {
 
     // change magic 8 ball image back to ball-0
     let magicBall = document.querySelector('.game-ball');
@@ -99,5 +99,5 @@ document.querySelector('.btn-reset').addEventListener('click', function() {
 
     // hide reset button and show shake button
     document.querySelector('.btn-shake').style.display = 'inline';
-    document.querySelector('.btn-reset').style.display = 'none';
+    // document.querySelector('.btn-clear').style.display = 'none';
 })
