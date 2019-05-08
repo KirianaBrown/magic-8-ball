@@ -6,30 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Magic Eight Ball | Kiriana Brown </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="kiriana brown, kirianabrown, kiriana, magic8ball, javascript game, vanilla javascript">
+    <meta name="description" content="Kiriana Brown: Magic 8 Ball game developed using vanilla javascript. Code located on github repo." <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
     <link rel="shortcut icon" href="logo transparent.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="icon" href="logo transparent.png" type="image/x-icon">
-
 </head>
 
 <body>
     <header>
-        <h1> KB </h1>
+        <a href="https://kirianabrown.github.io/" target="__blank">
+            <h1 class="logo"> KB </h1>
+        </a>
     </header>
 
     <div class="container-h">
+
         <div class="panel-1">
-            <h1 class="title"> Magic 8 Ball</h1>
-            <label> Ask a Question </label><br>
-            <input type="text" name="fname" id="inputField"><br>
-            <p class="no-input-message"> Please enter a question </p>
-            <button type="button" class="btn-shake"> SHAKE</button><br>
-            <button type="button" class="btn-reset" autofocus> RESET </button>
+
+            <div class="panel-1-children">
+                <h1 class="title"> Magic 8 Ball</h1>
+                <p class="introductory-p"> Got a question on your mind? Searching for a decision? Ask the magic 8 ball to help you make a decision!</p>
+                <!-- <label> Ask a Question </label><br> -->
+
+                <input type="text" id="inputField" placeholder="Ask a Question" autofocus><i class="fas fa-times  btn-clear"></i>
+
+
+                <p class="no-input-message"> Please enter a question </p>
+                <button type="button" class="btn-shake"> SHAKE</button><br>
+                <!-- <button type="button" class="btn-reset" autofocus> RESET </button> -->
+            </div>
         </div>
         <div class="panel-2">
             <img src="./src/assets/ball-0.png" class="game-ball" id="ballQuestion">
         </div>
+
+        <footer>
+            <p> Created by Kiriana Brown 2019.</p>
+            <div class="footer-end">
+                <p> <a href="https://github.com/KirianaBrown/magic-8-ball" target="__blank">Code</a></p>
+                <a href="https://github.com/KirianaBrown" target="__blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kirianabrown/" target="__blank"><i class=" fab fa-linkedin"></i></a>
+            </div>
+        </footer>
 
     </div>
     <script src="main.js"></script>
