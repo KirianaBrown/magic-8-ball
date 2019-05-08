@@ -105,7 +105,7 @@ button:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 1em;
-    height: calc(100vh - 6em);
+    height: calc(100vh - 7em);
     /* background-color: orange; */
     width: 90%;
     margin: 0 auto;
@@ -169,7 +169,7 @@ input[type=text]:focus {
 
 .no-input-message {
     color: red;
-    font-size: 0.9em;
+    font-size: 0.6em;
     padding: 1em;
     margin-top: -2em;
     margin-bottom: 1em;
@@ -224,7 +224,7 @@ footer {
     display: flex;
     justify-content: space-between;
     font-size: 0.6em;
-    margin-top: 8em;
+    margin-top: 5em;
 }
 
 footer a {

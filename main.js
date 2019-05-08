@@ -9,7 +9,6 @@
 
 */
 
-
 /*
 
 document.querySelector('.btn-shake').addEventListener('click', function() {
@@ -61,11 +60,15 @@ document.querySelector('.btn-shake').addEventListener('click', function() {
 
         // Update src of image using the random number
 
-
         setTimeout(function() {
             magicBall.src = './src/assets/ball-' + randomNumber + '.png';
             console.log('update the content in the ball')
         }, 800);
+
+        setTimeout(function() {
+            magicBall.src = './src/assets/ball-0.png';
+            console.log('update the content in the ball')
+        }, 4000);
 
 
         // magicBall.src = './src/assets/ball-' + randomNumber + '.png';
