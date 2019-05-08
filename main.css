@@ -24,9 +24,9 @@ p {
 }
 
 body {
-    /* background-image: url('background.png'); */
-    background-color: #e9ecef;
-    /* background-size: cover; */
+    background-image: url('background.png');
+    /* background-color: #e9ecef; */
+    background-size: cover;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -224,7 +224,11 @@ footer {
     display: flex;
     justify-content: space-between;
     font-size: 0.6em;
-    margin-top: 4em;
+    margin-top: 8em;
+}
+
+footer a {
+    color: black;
 }
 
 .footer-end {
